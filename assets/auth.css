@@ -1,0 +1,18 @@
+.form.auth{
+    max-width: 750px;
+    margin-top: 70px;
+}
+@media screen and (max-width: 992px) {
+    .form.auth{
+        margin-top: 20px;
+    }
+
+}
+.form.auth .registration{
+    margin-top: 24px;
+}
+.form.auth .registration a{
+    color: #4E4B66;
+    font-weight: bold;
+}
+

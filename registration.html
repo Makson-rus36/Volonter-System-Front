@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Волонтер.HELP</title>
+    <link rel="stylesheet" type="text/css" href="assets/index.css">
+    <script type="module" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.js"></script>
+</head>
+<header>
+    <div id="navbar-container"></div>
+    <script type="module" src="scripts/navbar.js"></script>
+</header>
+<body>
+<div class="wrapper">
+    <div class="content container">
+        <div class="row">
+            <div class="col col-12">
+                <div>
+                    <form id="reg-form" class="needs-validation form auth mx-auto" novalidate>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Добро пожаловать</h1>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                Для регистрации заполните все поля
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <div id="error-reg-form" class="invalid-feedback d-block text-center"></div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-form-fio"></label>
+                                <input id="reg-form-fio" field="fio" class="form-control" type="text" placeholder="ФИО" required>
+                                <div class="invalid-feedback">
+                                    Введите ФИО
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-form-date-birth"></label>
+                                <input id="reg-form-date-birth" field="dateBirth" type="text" class="form-control"
+                                       onfocusin="(this.type='date')" onfocusout="(this.type='text')"
+                                       placeholder="Дата рождения" required>
+                                <div class="invalid-feedback">
+                                    Введите дату рождения
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-form-city"></label>
+                                <input id="reg-form-city" field="city" list="datalistCities" class="form-control" placeholder="Город"
+                                       required>
+                                <datalist id="datalistCities">
+                                </datalist>
+                                <div class="invalid-feedback">
+                                    Введите ваш город
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-form-email"></label>
+                                <input id="reg-form-email" field="email" type="email" class="form-control" placeholder="Эл. почта"
+                                       required>
+                                <div class="invalid-feedback">
+                                    Введите корректный адрес электронной почты
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-form-phone"></label>
+                                <input id="reg-form-phone" field="phone" type="tel" pattern=".{17,}" class="tel form-control" placeholder="Телефон"
+                                       required>
+                                <div class="invalid-feedback">
+                                    Введите номер телефона
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-form-password"></label>
+                                <input id="reg-form-password" field="password" type="password" class="form-control"
+                                       placeholder="Введите пароль" required>
+                                <div class="invalid-feedback">
+                                    Введите пароль
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="reg-form-role"></label>
+                                <select id="reg-form-role" field="role" class="form-control"  required>
+                                    <option selected value="client">Клиент</option>
+                                    <option value="volonter">Волонтер</option>
+                                </select>
+                            </div>
+                            <div class="col-12 d-flex submit">
+                                <button type="submit" class="btn btn-primary mx-auto">Регистрация</button>
+                            </div>
+                            <div class="col-12 d-flex registration justify-content-center">
+                                <div class="d-flex">Есть учетная запись? <a class="ms-1" href="auth.html">Войти</a></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <h5>© 2023 Все права защищены</h5>
+</footer>
+<script type="module" src="scripts/cities.js"></script>
+<script type="module" src="scripts/registration.js"></script>
+</body>
+</html>

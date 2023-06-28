@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Волонтер.HELP</title>
+    <link rel="stylesheet" type="text/css" href="assets/index.css">
+    <script type="text/javascript" src="scripts/index.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+<header>
+    <div id="navbar-container"></div>
+    <script type="module" src="scripts/navbar.js"></script>
+</header>
+<div class="flex-grow-1">
+    <div class="content container">
+        <div class="row">
+            <div class="col col-12">
+                <div>
+                    <form id="auth-form" class="form auth mx-auto">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Добро пожаловать</h1>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <div id="error-auth-form" class="invalid-feedback d-block text-center"></div>
+                            </div>
+                            <div class="col-12">
+                                <label for="auth-form-login"></label>
+                                <input id="auth-form-login" type="email" placeholder="Введите эл. почту" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="auth-form-password"></label>
+                                <input id="auth-form-password" type="password" placeholder="Введите пароль" required>
+                            </div>
+                            <div class="col-12 d-flex submit">
+                                <button type="submit" class="btn btn-primary mx-auto">Войти</button>
+                            </div>
+                            <div class="col-12 d-flex registration justify-content-center">
+                                <div class="d-flex">Нет учетной записи? <a class="ms-1" href="/registration.html">Регистрация</a></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <h5>© 2023 Все права защищены</h5>
+</footer>
+<script type="module" src="scripts/auth.js"></script>
+</body>
+</html>
